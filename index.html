@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antropologia</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8611/8611180.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <style>
@@ -18,6 +19,16 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
+        }
+        h1 {
+            text-transform: uppercase;
+            counter-increment: h1-counter;
+        }
+        h1::before {
+            content: counter(h1-counter) ". ";
+        }
+        body {
+            counter-reset: h1-counter;
         }
         h2.color1 { color: #bfa046 !important; }  /* dourado */
         h2.color2 { color: #a0522d !important; }  /* marrom */
@@ -35,6 +46,17 @@
             color: #bfa046 !important;
             text-shadow: 0 0 6px #fff7, 0 0 2px #bfa046;
             transition: color 0.2s, text-shadow 0.2s;
+        }
+        .navbar-toggler {
+            border-color: #fff; /* Borda branca */
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícone branco */
+        }
+        .promove a {
+            text-decoration: none; /* Remove o sublinhado */
+            text-transform: uppercase; /* Deixa o texto em maiúsculo */
+            color: black; /* Define a cor preta */
         }
     </style>
 </head>
@@ -62,7 +84,13 @@
                         <a class="nav-link text-white" href="#teoricos">Primeiros teóricos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#concepcao">Conceito de ser humano</a>
+                        <a class="nav-link text-white" href="#concepcao">Concepção de ser humano</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#conclusao">Conclusão</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#referencias">Referências</a>
                     </li>
                 </ul>
             </div>
@@ -87,7 +115,7 @@
             Diferente do positivismo, essa abordagem considera que os fenômenos sociais devem ser analisados dentro de seu contexto histórico específico. Ou seja, cada sociedade tem sua própria trajetória e não pode ser explicada apenas por leis universais. Essa visão é influenciada por pensadores como Karl Marx, que enfatizam a importância das relações sociais e econômicas na formação das culturas
             </p>
         </section>
-        <section id="glossario" class="mb-5">
+        <section id="glossario" class="mb-5" style="padding-top: 70px; margin-top: -70px;">
             <h1>Glossário com os termos que você mencionou, dentro do contexto antropológico:</h1>
             <h2 class="color3">Primitivo</h2>
             <p>Termo historicamente usado para descrever sociedades consideradas menos desenvolvidas tecnologicamente. Hoje, é criticado por sua conotação pejorativa e etnocêntrica.</p>
@@ -139,26 +167,35 @@
                      alt="Conceito de ser humano"
                      style="max-width: 100%; height: 140px; object-fit: cover; border-radius: 18px; box-shadow: 0 2px 12px #0002;">
             </div>
-            <h1>Conceito de ser humano</h1>
+            <h1>Concepção de ser humano</h1>
             <h2 class="color6">Antiguidade (do mito à razão)</h2>
             <p>O pensamento antigo via o ser humano como uma combinação de corpo (temporário) e alma (permanente), refletindo um dualismo presente em filosofias como a de Platão. A transição do pensamento mítico para o racional marcou o início da filosofia ocidental</p>
             <h2 class="color7">Idade Média (teocentrismo)</h2>
             <p>Durante a Idade Média, o ser humano era visto como parte do plano divino, com a teologia dominando o pensamento. A visão antropocêntrica começou a emergir, mas ainda estava subordinada à vontade de Deus.</p>
-            <h2 class="color8">Renascimento (antropocentrismo)</h2>
-            <p>O Renascimento trouxe uma nova valorização do ser humano, destacando sua capacidade de razão e criatividade. A arte e a ciência floresceram, refletindo uma visão mais positiva do potencial humano.</p>
             <h2 class="color9">Modernidade (racionalismo)</h2>
             <p>A Modernidade trouxe uma ênfase na razão e na ciência, com pensadores como Descartes defendendo a ideia de que o ser humano é um ser pensante. Essa visão levou ao desenvolvimento do individualismo e à valorização da autonomia.</p>
-            <h2 class="color10">Pós-modernidade (pluralidade)</h2>
-            <p>A Pós-modernidade questiona as narrativas universais e absolutas, enfatizando a diversidade e a multiplicidade de identidades. O ser humano é visto como um ser em constante construção, influenciado por contextos sociais, culturais e históricos.</p>
             <h2 class="color1">Antropologia contemporânea</h2>
             <p>A antropologia contemporânea busca entender o ser humano em sua complexidade, considerando fatores sociais, culturais, econômicos e políticos. Ela desafia visões simplistas e busca compreender a diversidade das experiências humanas.</p>
-            <h2 class="color2">Conclusão</h2>
+        </section>
+        <section id="conclusao" class="mb-5" style="padding-top: 70px; margin-top: -70px;">
+            <h1 class="color2">Conclusão</h1>
             <p>A antropologia, ao longo da história, buscou compreender o ser humano em sua diversidade e complexidade. Desde as explicações positivistas até abordagens contemporâneas que enfatizam pluralidade e contexto social, essa disciplina nos ajuda a refletir sobre nossas próprias crenças e estruturas sociais. Ao reconhecer a importância da alteridade e da compreensão mútua, podemos construir sociedades mais justas e abertas à diversidade cultural. </p>
+        </section>
+        <section id="referencias" class="mb-5">
+            <h1>Referências</h1>
+            <p class="color6"><strong>7.1 Um casamento de Valor</strong></p>
+            <p>Para acessar o texto completo, clique <a href="https://uploadnow.io/f/yV2PYVS" target="_blank">aqui</a>.</p>
+            <p class="color6"><strong>7.2 Os Primeiros Teóricos da Antropologia</strong></p>
+            <p>Para acessar o texto completo, clique <a href="https://uploadnow.io/f/Yx7yKll" target="_blank">aqui</a>.</p>
+            <p class="color6"><strong>7.3 O Novo Mundo</strong></p>
+            <p>Para acessar o texto completo, clique <a href="https://uploadnow.io/f/TrVbYrZ" target="_blank">aqui</a>.</p>
+            <p class="color6"><strong>7.4 Concepções de Ser Humano</strong></p>
+            <p>Para acessar o texto completo, clique <a href="https://uploadnow.io/f/4wPqZJ2" target="_blank">aqui</a>.</p>
         </section>
         <footer class="text-center mt-5">
             <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAATlBMVEUAAABHcEzuTSLvTSLvTSLvTSLvTSLvTSLvTSLrSyHvTSLvSRryblHvPwL72NL////3tKf5w7nzg232pJXuNwDvTSL98e/85uLvTSL1lIEcYvAyAAAAGXRSTlMBADSDv+L/Ye0XQf////////////+K///F8Tw9YAAAARhJREFUeAF1klUCBCEIQMXpcLDj/hddXWF7+TEeDaILAMhhnOZ5GgcJQL/MlnV+yLp0TGibGHSZtgeFff4SCf8ZU9geH0eVx6N5BnjGO6s84za48EtdqA1eit8LCHjWgGgt4vGoCIR8GLoKDkTnHzmJwFcfMXmfMOmTjAeRiR0novY1biyGbEfBIZVBvK7LWYfFddNJPA1NKe6qXkss5JehIlBM9cvVkNvDNkMTK7eaS50oocO5iNFY5S0izt3tSKWolErxqn1WqBWVIsmwxrp/1UoxemoCrFQkasUloT16+2DpPY/JHj21FHv3F6CRnaoHbLReWwMnABo2gS79SWv0c032f0tEjOT3ajL/t9REQYa8VpCDBGY31pgX/FKD4s4AAAAASUVORK5CYII=" alt=""> UNASP - Centro Universitário Adventista de São Paulo</p>
             <p>&copy; 2025 Antropologia Cristã. Professor Francisco Luiz Gomes de Carvalho.</p>
-            <p>Desenvolvido por:<br> Bruno | Graziela | João Pedro</p>
+            <p class="promove">Desenvolvido por:<br><a href="">Bruno</a> | <a href="">Graziela Oliveira</a> | <a href="https://github.com/ujota" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3291/3291695.png" alt="Ícone GitHub" style="width: 16px; height: 16px; margin-right: 5px;">João Pedro Amaral</a> | <a href="">Lukas Rocha</a></p>
         </footer>
     </div>
 </body>
